@@ -21,8 +21,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    @IBAction func onPanGesture(_ sender: UIPanGestureRecognizer) {
+    @IBAction func onPanGesture(_ gesture: UIPanGestureRecognizer) {
+        let gestureTranslation = gesture.translation(in: view)
         
+        guard let gestureView = gesture.view else {
+            return
+        }
+        
+        let text = "x=\(gestureTranslation.x), y=\(gestureTranslation.y)"
+        
+        label.text = text
     }
 }
 
