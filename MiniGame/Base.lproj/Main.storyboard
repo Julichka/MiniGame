@@ -28,6 +28,9 @@
                                 <rect key="frame" x="275" y="169" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="SZB-jL-mW6" appends="YES" id="qQZ-BX-pyO"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rka-Z9-T8N">
                                 <rect key="frame" x="45" y="739" width="100" height="100"/>
@@ -44,20 +47,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gs3-rU-HuL">
-                                <rect key="frame" x="45" y="91" width="349" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                     </view>
                     <connections>
-                        <outlet property="label" destination="gs3-rU-HuL" id="vkU-pg-ftz"/>
                         <outlet property="view1" destination="Vp9-cM-1ab" id="Oxz-OP-nTS"/>
                         <outlet property="view2" destination="eR4-kB-1Me" id="uGu-F6-B3Y"/>
                         <outlet property="view3" destination="Rka-Z9-T8N" id="Xcs-Rd-pII"/>
@@ -70,6 +65,12 @@
                     <connections>
                         <action selector="onPanGestureView1:" destination="BYZ-38-t0r" id="IZn-nQ-WMF"/>
                         <outlet property="delegate" destination="8bC-Xf-vdC" id="3BJ-M6-mpC"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="SZB-jL-mW6">
+                    <connections>
+                        <action selector="onPanGestureView2:" destination="BYZ-38-t0r" id="pDm-yH-MBO"/>
+                        <outlet property="delegate" destination="8bC-Xf-vdC" id="DdU-Uh-cfe"/>
                     </connections>
                 </panGestureRecognizer>
             </objects>
