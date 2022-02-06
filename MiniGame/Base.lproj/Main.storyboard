@@ -52,6 +52,9 @@
                                 <rect key="frame" x="141" y="420" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="QuP-x3-eSy" appends="YES" id="OWf-yJ-LW2"/>
+                                </connections>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -89,6 +92,12 @@
                     <connections>
                         <action selector="onPanGestureView4:" destination="BYZ-38-t0r" id="Hqv-ar-d8m"/>
                         <outlet property="delegate" destination="8bC-Xf-vdC" id="XeH-WZ-AKB"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="QuP-x3-eSy">
+                    <connections>
+                        <action selector="onPanGestureView5:" destination="BYZ-38-t0r" id="GJm-K5-35H"/>
+                        <outlet property="delegate" destination="8bC-Xf-vdC" id="iVs-wR-o0V"/>
                     </connections>
                 </panGestureRecognizer>
             </objects>
