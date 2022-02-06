@@ -36,6 +36,9 @@
                                 <rect key="frame" x="45" y="739" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="qt8-TS-MFs" appends="YES" id="aai-5M-Sus"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8jQ-U9-nvr">
                                 <rect key="frame" x="275" y="739" width="100" height="100"/>
@@ -71,6 +74,12 @@
                     <connections>
                         <action selector="onPanGestureView2:" destination="BYZ-38-t0r" id="pDm-yH-MBO"/>
                         <outlet property="delegate" destination="8bC-Xf-vdC" id="DdU-Uh-cfe"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="qt8-TS-MFs">
+                    <connections>
+                        <action selector="onPanGestureView3:" destination="BYZ-38-t0r" id="2Hn-e3-2ia"/>
+                        <outlet property="delegate" destination="8bC-Xf-vdC" id="vBg-BO-hVy"/>
                     </connections>
                 </panGestureRecognizer>
             </objects>
