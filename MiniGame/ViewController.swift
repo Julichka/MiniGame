@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    @IBAction func onPanGesture(_ gesture: UIPanGestureRecognizer) {
+    @IBAction func onPanGestureView1(_ gesture: UIPanGestureRecognizer) {
         let gestureTranslation = gesture.translation(in: view)
         
         guard let gestureView = gesture.view else {
