@@ -17,7 +17,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
     func calculateDistanceAndUpdateViews(staticView: UIView, draggableView: UIView) {
@@ -25,6 +24,11 @@ class ViewController: UIViewController {
             if (staticView != draggableView) {
                 print(distanceBetweenViews(view1: staticView, view2: draggableView))
                 draggableView.isHidden = true
+                
+                let currentAlpha = staticView.alpha
+                let newAlpha = currentAlpha + 0.15
+                
+                staticView.alpha = newAlpha
             }
         }
     }
