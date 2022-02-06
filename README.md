@@ -1,1 +1,1 @@
-Demo video located in demo.mp4 file
+Demo video located in the demo.mp4 file

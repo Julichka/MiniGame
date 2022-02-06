@@ -48,8 +48,24 @@
                                     <outletCollection property="gestureRecognizers" destination="vW2-Su-WaF" appends="YES" id="KqG-f0-hxO"/>
                                 </connections>
                             </view>
+                            <view alpha="0.40000000596046448" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RUu-5v-JQw">
+                                <rect key="frame" x="172" y="318" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="NFi-mb-hNZ" appends="YES" id="mvL-k0-GdB"/>
+                                </connections>
+                            </view>
+                            <view alpha="0.40000000596046448" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mqz-zJ-3db">
+                                <rect key="frame" x="275" y="557" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="YqW-C0-klc" appends="YES" id="WFf-CK-KbP"/>
+                                </connections>
+                            </view>
                             <view alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e7o-d6-ngy">
-                                <rect key="frame" x="141" y="420" width="70" height="70"/>
+                                <rect key="frame" x="61" y="486" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <connections>
@@ -67,6 +83,8 @@
                         <outlet property="view3" destination="Rka-Z9-T8N" id="Xcs-Rd-pII"/>
                         <outlet property="view4" destination="8jQ-U9-nvr" id="Wow-BH-pYu"/>
                         <outlet property="view5" destination="e7o-d6-ngy" id="G1k-2K-E3q"/>
+                        <outlet property="view6" destination="RUu-5v-JQw" id="VCR-db-SWg"/>
+                        <outlet property="view7" destination="Mqz-zJ-3db" id="0ji-V5-4H0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -98,6 +116,18 @@
                     <connections>
                         <action selector="onPanGestureView5:" destination="BYZ-38-t0r" id="GJm-K5-35H"/>
                         <outlet property="delegate" destination="8bC-Xf-vdC" id="iVs-wR-o0V"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="NFi-mb-hNZ">
+                    <connections>
+                        <action selector="onPanGestureView6:" destination="BYZ-38-t0r" id="eOf-cY-XtA"/>
+                        <outlet property="delegate" destination="8bC-Xf-vdC" id="JUa-eD-NAz"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="YqW-C0-klc">
+                    <connections>
+                        <action selector="onPanGestureView7:" destination="BYZ-38-t0r" id="HaS-Kv-2wH"/>
+                        <outlet property="delegate" destination="8bC-Xf-vdC" id="3H4-hz-HFn"/>
                     </connections>
                 </panGestureRecognizer>
             </objects>
