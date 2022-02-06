@@ -17,6 +17,17 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        makeViewAsCircle(view: view1)
+        makeViewAsCircle(view: view2)
+        makeViewAsCircle(view: view3)
+        makeViewAsCircle(view: view4)
+        makeViewAsCircle(view: view5)
+    }
+    
+    func makeViewAsCircle(view: UIView) {
+        view.layer.cornerRadius = view.layer.bounds.width / 2
+        view.clipsToBounds = true
     }
     
     func calculateDistanceAndUpdateViews(staticView: UIView, draggableView: UIView) {
@@ -25,12 +36,14 @@ class ViewController: UIViewController {
                 print(distanceBetweenViews(view1: staticView, view2: draggableView))
                 draggableView.isHidden = true
                 
-                staticView.alpha = staticView.alpha + 0.15
+                staticView.alpha = staticView.alpha + 0.15 //increase opacity for 15% when views merged
                 
                 let currentStaticViewSize = staticView.frame.width
-                let newSize = currentStaticViewSize * 1.2
+                let newSize = currentStaticViewSize * 1.2 //increase size of the view for 20% when views merged
                 
                 staticView.frame = CGRect(x: staticView.frame.minX, y: staticView.frame.minY, width: newSize, height: newSize)
+                
+                makeViewAsCircle(view: staticView)
             }
         }
     }
