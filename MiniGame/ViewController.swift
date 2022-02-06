@@ -51,5 +51,8 @@ class ViewController: UIViewController {
     @IBAction func onPanGestureView3(_ gesture: UIPanGestureRecognizer) {
         handleGestureAction(gesture: gesture)
     }
+    @IBAction func onPanGestureView4(_ gesture: UIPanGestureRecognizer) {
+        handleGestureAction(gesture: gesture)
+    }
 }
 
