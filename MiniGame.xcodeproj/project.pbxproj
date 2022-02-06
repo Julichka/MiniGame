@@ -13,6 +13,8 @@
 		32DBE87527AF638E00C38ABE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32DBE87327AF638E00C38ABE /* Main.storyboard */; };
 		32DBE87727AF639200C38ABE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32DBE87627AF639200C38ABE /* Assets.xcassets */; };
 		32DBE87A27AF639200C38ABE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32DBE87827AF639200C38ABE /* LaunchScreen.storyboard */; };
+		32DBE88227AF88B200C38ABE /* Circle.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32DBE88127AF88B200C38ABE /* Circle.xib */; };
+		32DBE88627AF893700C38ABE /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DBE88527AF893700C38ABE /* CircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		32DBE87627AF639200C38ABE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32DBE87927AF639200C38ABE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32DBE87B27AF639200C38ABE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32DBE88127AF88B200C38ABE /* Circle.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Circle.xib; sourceTree = "<group>"; };
+		32DBE88527AF893700C38ABE /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				32DBE87627AF639200C38ABE /* Assets.xcassets */,
 				32DBE87827AF639200C38ABE /* LaunchScreen.storyboard */,
 				32DBE87B27AF639200C38ABE /* Info.plist */,
+				32DBE88127AF88B200C38ABE /* Circle.xib */,
+				32DBE88527AF893700C38ABE /* CircleView.swift */,
 			);
 			path = MiniGame;
 			sourceTree = "<group>";
@@ -125,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32DBE87A27AF639200C38ABE /* LaunchScreen.storyboard in Resources */,
+				32DBE88227AF88B200C38ABE /* Circle.xib in Resources */,
 				32DBE87727AF639200C38ABE /* Assets.xcassets in Resources */,
 				32DBE87527AF638E00C38ABE /* Main.storyboard in Resources */,
 			);
@@ -137,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32DBE88627AF893700C38ABE /* CircleView.swift in Sources */,
 				32DBE87227AF638E00C38ABE /* ViewController.swift in Sources */,
 				32DBE86E27AF638E00C38ABE /* AppDelegate.swift in Sources */,
 				32DBE87027AF638E00C38ABE /* SceneDelegate.swift in Sources */,

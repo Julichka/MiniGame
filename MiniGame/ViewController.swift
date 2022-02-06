@@ -8,46 +8,25 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var view1: UIView!
-    @IBOutlet weak var view2: UIView!
-    @IBOutlet weak var view3: UIView!
-    @IBOutlet weak var view4: UIView!
-    @IBOutlet weak var view5: UIView!
-    @IBOutlet weak var view6: UIView!
-    @IBOutlet weak var view7: UIView!
+    
+    @IBOutlet weak var view1: CircleView!
+    @IBOutlet weak var view2: CircleView!
+    @IBOutlet weak var view3: CircleView!
+    @IBOutlet weak var view4: CircleView!
+    @IBOutlet weak var view5: CircleView!
+    @IBOutlet weak var view6: CircleView!
+    @IBOutlet weak var view7: CircleView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        makeViewAsCircle(view: view1)
-        makeViewAsCircle(view: view2)
-        makeViewAsCircle(view: view3)
-        makeViewAsCircle(view: view4)
-        makeViewAsCircle(view: view5)
-        makeViewAsCircle(view: view6)
-        makeViewAsCircle(view: view7)
     }
     
-    func makeViewAsCircle(view: UIView) {
-        view.layer.cornerRadius = view.layer.bounds.width / 2
-        view.clipsToBounds = true
-    }
-    
-    func calculateDistanceAndUpdateViews(staticView: UIView, draggableView: UIView) {
+    func calculateDistanceAndUpdateViews(staticView: CircleView, draggableView: UIView) {
         if (distanceBetweenViews(view1: staticView, view2: draggableView) < 50.0) {
             if (staticView != draggableView) {
                 print(distanceBetweenViews(view1: staticView, view2: draggableView))
                 draggableView.isHidden = true
-                
-                staticView.alpha = staticView.alpha + 0.1 //increase opacity for 10% when views merged
-                
-                let currentStaticViewSize = staticView.frame.width
-                let newSize = currentStaticViewSize * 1.2 //increase size of the view for 20% when views merged
-                
-                staticView.frame = CGRect(x: staticView.frame.minX, y: staticView.frame.minY, width: newSize, height: newSize)
-                
-                makeViewAsCircle(view: staticView)
+                staticView.updateAfterMerging()
             }
         }
     }
