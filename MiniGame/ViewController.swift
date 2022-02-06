@@ -25,10 +25,12 @@ class ViewController: UIViewController {
                 print(distanceBetweenViews(view1: staticView, view2: draggableView))
                 draggableView.isHidden = true
                 
-                let currentAlpha = staticView.alpha
-                let newAlpha = currentAlpha + 0.15
+                staticView.alpha = staticView.alpha + 0.15
                 
-                staticView.alpha = newAlpha
+                let currentStaticViewSize = staticView.frame.width
+                let newSize = currentStaticViewSize * 1.2
+                
+                staticView.frame = CGRect(x: staticView.frame.minX, y: staticView.frame.minY, width: newSize, height: newSize)
             }
         }
     }
