@@ -31,6 +31,17 @@ class ViewController: UIViewController {
         let text = "x=\(gestureTranslation.x), y=\(gestureTranslation.y)"
         
         label.text = text
+        
+        gestureView.center = CGPoint(
+            x: gestureView.center.x + gestureTranslation.x,
+            y: gestureView.center.y + gestureTranslation.y
+        )
+        
+        gesture.setTranslation(.zero, in: view)
+        
+        guard gesture.state == .ended else {
+            return
+        }
     }
 }
 

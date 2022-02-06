@@ -40,6 +40,9 @@
                                 <rect key="frame" x="141" y="420" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="rhQ-Tl-GwF" appends="YES" id="D5a-Qe-c3P"/>
+                                </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gs3-rU-HuL">
                                 <rect key="frame" x="45" y="91" width="349" height="21"/>
@@ -52,9 +55,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="rhQ-Tl-GwF" appends="YES" id="kOr-EF-4HL"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="label" destination="gs3-rU-HuL" id="vkU-pg-ftz"/>
@@ -68,8 +68,8 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="rhQ-Tl-GwF">
                     <connections>
-                        <action selector="onPanGesture:" destination="BYZ-38-t0r" id="8CK-6H-VWI"/>
-                        <outlet property="delegate" destination="8bC-Xf-vdC" id="fua-Da-So9"/>
+                        <action selector="onPanGesture:" destination="BYZ-38-t0r" id="IZn-nQ-WMF"/>
+                        <outlet property="delegate" destination="8bC-Xf-vdC" id="3BJ-M6-mpC"/>
                     </connections>
                 </panGestureRecognizer>
             </objects>
