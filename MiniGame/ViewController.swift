@@ -20,10 +20,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
-    
-    
-    @IBAction func onPanGestureView1(_ gesture: UIPanGestureRecognizer) {
+    func handleGestureAction(gesture: UIPanGestureRecognizer) {
         let gestureTranslation = gesture.translation(in: view)
         
         guard let gestureView = gesture.view else {
@@ -43,23 +40,13 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func onPanGestureView1(_ gesture: UIPanGestureRecognizer) {
+        handleGestureAction(gesture: gesture)
+    }
+    
+    
     @IBAction func onPanGestureView2(_ gesture: UIPanGestureRecognizer) {
-        let gestureTranslation = gesture.translation(in: view)
-        
-        guard let gestureView = gesture.view else {
-            return
-        }
-        
-        gestureView.center = CGPoint(
-            x: gestureView.center.x + gestureTranslation.x,
-            y: gestureView.center.y + gestureTranslation.y
-        )
-        
-        gesture.setTranslation(.zero, in: view)
-        
-        guard gesture.state == .ended else {
-            return
-        }
+        handleGestureAction(gesture: gesture)
     }
 }
 
