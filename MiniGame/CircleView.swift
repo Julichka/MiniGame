@@ -8,7 +8,7 @@
 import UIKit
 
 class CircleView: UIView {
-
+    
     var xibName = "Circle"
     var workingView: UIView!
     
@@ -36,7 +36,7 @@ class CircleView: UIView {
     }
     
     func updateAfterMerging() {
-        animateViewOpacity()
+        animateViewColor()
         animateViewSize()
     }
     
@@ -48,10 +48,9 @@ class CircleView: UIView {
         })
     }
     
-    func animateViewOpacity() {
-        let newAlpha = self.alpha + 0.1 //increase opacity for 10% when views merged
-        UIView.animate(withDuration: 2.0, animations: {
-            self.alpha = newAlpha
+    func animateViewColor() {
+        UIView.animate(withDuration: 1.0, animations: {
+            self.workingView.backgroundColor = self.getRandomColor()
         })
     }
     
@@ -59,9 +58,19 @@ class CircleView: UIView {
         workingView = getFromXib()
         workingView.frame = bounds
         workingView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        workingView.backgroundColor = getRandomColor()
         
         makeViewAsCircle()
         
         addSubview(workingView)
+    }
+    
+    func getRandomColor() -> UIColor {
+        let red   = CGFloat((arc4random() % 256)) / 255.0
+        let green = CGFloat((arc4random() % 256)) / 255.0
+        let blue  = CGFloat((arc4random() % 256)) / 255.0
+        let alpha = CGFloat(1.0)
+        
+        return UIColor(red: red, green: green, blue: blue, alpha: alpha)
     }
 }
