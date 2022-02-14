@@ -42,10 +42,10 @@ class CircleView: UIView {
     
     func animateViewSize() {
         let newSize = frame.width * 1.2 //increase size of the view for 20% when views merged
-        
-        frame = CGRect(x: frame.minX, y: frame.minY, width: newSize, height: newSize)
-        
-        makeViewAsCircle()
+        UIView.animate(withDuration: 2.0, animations: {
+            self.frame = CGRect(x: self.frame.minX, y: self.frame.minY, width: newSize, height: newSize)
+            self.makeViewAsCircle()
+        })
     }
     
     func animateViewOpacity() {
