@@ -49,7 +49,10 @@ class CircleView: UIView {
     }
     
     func animateViewOpacity() {
-        alpha = alpha + 0.1 //increase opacity for 10% when views merged
+        let newAlpha = self.alpha + 0.1 //increase opacity for 10% when views merged
+        UIView.animate(withDuration: 2.0, animations: {
+            self.alpha = newAlpha
+        })
     }
     
     func setCustomView() {
