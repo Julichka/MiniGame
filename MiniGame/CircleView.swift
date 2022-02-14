@@ -61,7 +61,6 @@ class CircleView: UIView {
         workingView.backgroundColor = getRandomColor()
         
         makeViewAsCircle()
-        
         addSubview(workingView)
     }
     
